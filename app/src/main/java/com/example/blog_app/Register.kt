@@ -47,13 +47,18 @@ class Register : AppCompatActivity() {
             return
         }
 
-        var url = "http://192.168.71.1/android_distribuidora/insert.php"
+        var url = "http://192.168.1.64/findapp/insert.php"
 
         val queue = Volley.newRequestQueue(this)
 
         var resultadoPost = object:StringRequest(Method.POST,url,
             Response.Listener { response ->
-                Snackbar.make(view, "Felicidades usuario agregado exitosamente", Snackbar.LENGTH_LONG).show()}
+                val intent = Intent(this, MainActivity::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+                startActivity(intent)
+                finish()
+                Snackbar.make(view, "Felicidades usuario agregado exitosamente", Snackbar.LENGTH_LONG).show()
+                              }
             ,Response.ErrorListener { error ->  Snackbar.make(view, "Error $error", Snackbar.LENGTH_LONG).show()}){
 
             override fun getParams(): MutableMap<String, String>? {
