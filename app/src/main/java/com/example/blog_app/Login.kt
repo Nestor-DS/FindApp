@@ -1,42 +1,84 @@
 package com.example.blog_app
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
+import android.app.ProgressDialog
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.widget.AppCompatButton
+import android.widget.EditText
+import android.widget.Toast
+import com.android.volley.AuthFailureError
+import com.android.volley.Request
+import com.android.volley.RequestQueue
+import com.android.volley.Response
+import com.android.volley.VolleyError
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
+import org.json.JSONObject
 
-class Login : AppCompatActivity() {
+class Login: AppCompatActivity() {
+
+    private lateinit var email: EditText
+    private lateinit var password: EditText
+
+    private lateinit var strEmail: String
+    private lateinit var strPassword: String
+    private val url = "http://192.168.1.64/findapp/login.php"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        email = findViewById(R.id.emailEditText)
+        password = findViewById(R.id.passwordEditText)
     }
 
-    override fun onWindowFocusChanged(hasFocus: Boolean) {
-        super.onWindowFocusChanged(hasFocus)
+    fun login(view: View) {
+        if (email.text.toString().isEmpty()) {
+            Toast.makeText(this, "Enter Email", Toast.LENGTH_SHORT).show()
+        } else if (password.text.toString().isEmpty()) {
+            Toast.makeText(this, "Enter Password", Toast.LENGTH_SHORT).show()
+        } else {
+            val progressDialog = ProgressDialog(this)
+            progressDialog.setMessage("Por favor espera...")
+            progressDialog.show()
 
-        if (hasFocus) {
-            val signUpButton: AppCompatButton = findViewById(R.id.BtnLogin)
+            strEmail = email.text.toString().trim()
+            strPassword = password.text.toString().trim()
 
-            // Establece la posición inicial del botón fuera de la pantalla
-            signUpButton.translationX = -signUpButton.width.toFloat()
-
-            // Crea y configura la animación
-            signUpButton.animate()
-                .translationX(0f)
-                .setDuration(1000)
-                .withEndAction {
-                    // Realiza la acción deseada después de la animación, por ejemplo, iniciar otra actividad
+            val request = object : StringRequest(
+                Request.Method.POST, url,
+                Response.Listener { response ->
+                    progressDialog.dismiss()
+                    if (response.equals("Ingreso correctamente", ignoreCase = true)) {
+                        email.setText("")
+                        password.setText("")
+                        startActivity(Intent(applicationContext, MainActivity::class.java))
+                        Toast.makeText(this@Login, response, Toast.LENGTH_SHORT).show()
+                    } else {
+                        Toast.makeText(this@Login, response, Toast.LENGTH_SHORT).show()
+                    }
+                },
+                Response.ErrorListener { error ->
+                    progressDialog.dismiss()
+                    Toast.makeText(this@Login, error.message.toString(), Toast.LENGTH_SHORT).show()
+                }) {
+                @Throws(AuthFailureError::class)
+                override fun getParams(): Map<String, String> {
+                    val params = HashMap<String, String>()
+                    params["email"] = strEmail
+                    params["password"] = strPassword
+                    return params
                 }
-                .start() // Inicia la animación
             }
 
+            val requestQueue = Volley.newRequestQueue(this)
+            requestQueue.add(request)
         }
+    }
 
     fun clickBtnRegister (view: View) {
         val intent = Intent (this, Register::class.java)
         startActivity(intent)
     }
-
-
 }
