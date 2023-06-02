@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="@color/primary1"
     tools:context=".Register">
 
     <TextView
@@ -13,15 +14,16 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Registro"
-        android:textSize="30sp"
+        android:textSize="42sp"
         android:textStyle="bold"
-        android:textColor="@color/black"/>
+        android:textColor="@color/white"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Crea una cuenta nueva"
+        android:textColor="@color/white"
         android:layout_marginTop="5dp"/>
 
     <EditText
@@ -29,7 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:background="@drawable/background_edit_text"
-        android:hint="Nombre"
+        android:hint="Nomnre"
         android:maxLines="1"
         android:inputType="text"
         android:textSize="16sp"
@@ -83,7 +85,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/background_edit_text"
-            android:hint="Password"
+            android:hint="Contraseña"
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
             android:textSize="16sp"
@@ -117,7 +119,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/background_edit_text"
-            android:hint="Confirmar password"
+            android:hint="Confirmar contraseña"
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
             android:textSize="16sp"
@@ -141,9 +143,9 @@
         android:id="@+id/singUpBtn"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="80dp"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginEnd="80dp"
         android:background="@drawable/background_btn_primary"
         android:onClick="clickBtnInsertar"
         android:text="Registrarse"
@@ -162,7 +164,7 @@
             android:layout_centerVertical="true"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#1A000000"
+            android:background="#F4F3F3"
             android:layout_toStartOf="@+id/orTxt"
             android:layout_marginEnd="20dp"
             android:layout_marginStart="20dp"/>
@@ -171,59 +173,38 @@
             android:id="@+id/orTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="O"
             android:layout_centerInParent="true"
-            android:textSize="12sp"
-            android:textColor="#000000"/>
+            android:text="O"
+            android:textColor="#F4F3F3"
+            android:textSize="12sp" />
 
         <View
             android:layout_centerVertical="true"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#1A000000"
+            android:background="#F4F3F3"
             android:layout_toEndOf="@+id/orTxt"
             android:layout_marginEnd="20dp"
+            android:layout_marginTop="40dp"
             android:layout_marginStart="20dp"/>
 
     </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:background="@drawable/background_edit_text"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp">
 
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="20dp"
-            android:adjustViewBounds="true"
-            android:src="@drawable/google2"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="Iniciar sesión con Google"
-            android:textColor="@color/black"
-            android:textStyle="bold" />
-
-    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_marginTop="40dp">
+        android:layout_marginTop="20dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="¿Ya tienes una cuenta?"/>
+            android:text="¿Ya tienes una cuenta?"
+            android:textColor="@color/white"
+            />
 
         <TextView
             android:id="@+id/singInBtn"
@@ -232,7 +213,7 @@
             android:layout_marginStart="5dp"
             android:onClick="clickBtnRegister"
             android:text="Iniciar Sesión"
-            android:textColor="#0E77CA" />
+            android:textColor="#f7a624" />
 
     </LinearLayout>
 
