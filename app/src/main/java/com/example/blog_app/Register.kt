@@ -47,7 +47,7 @@ class Register : AppCompatActivity() {
             return
         }
 
-        var url = "http://192.168.1.64/findapp/insert.php"
+        var url = "http://192.168.74.1/findapp/insert.php"
 
         val queue = Volley.newRequestQueue(this)
 

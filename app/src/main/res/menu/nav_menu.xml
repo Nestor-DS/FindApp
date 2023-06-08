@@ -8,19 +8,19 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_home"
-            android:title="Home"/>
+            android:title="Inicio"/>
         <item
             android:id="@+id/nav_settings"
             android:icon="@drawable/ic_map"
-            android:title="Ubication"/>
+            android:title="Ubicación"/>
         <item
             android:id="@+id/nav_share"
             android:icon="@drawable/ic_person"
-            android:title="Personal"/>
+            android:title="Registro"/>
         <item
             android:id="@+id/nav_about"
             android:icon="@drawable/ic_info"
-            android:title="About Us"/>
+            android:title="Acerca de"/>
     </group>
     <item
         android:title="">
