@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
+
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
@@ -9,15 +13,34 @@
     android:background="@drawable/headerbkg"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    <ImageView
-        android:layout_width="82dp"
-        android:layout_height="57dp"
-        android:layout_gravity="center"
-        android:src="@drawable/google2" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="5dp"
+        android:text="FindApp"
+        android:textColor="#f7a624"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        />
+
+    <View
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#F4F3F3"
+        android:layout_toEndOf="@+id/orTxt"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+      />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="5dp"
         android:text="Usuario"
         android:textColor="@color/white"
         android:textStyle="bold"/>
@@ -27,5 +50,5 @@
         android:text="correo@gmail.com"
         android:textColor="@color/white"
         android:textSize="14sp"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="30dp"/>
 </LinearLayout>
