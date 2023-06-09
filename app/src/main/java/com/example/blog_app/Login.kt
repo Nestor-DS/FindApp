@@ -2,6 +2,7 @@ package com.example.blog_app
 
 import androidx.appcompat.app.AppCompatActivity
 import android.app.ProgressDialog
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -81,4 +82,14 @@ class Login: AppCompatActivity() {
         val intent = Intent (this, Register::class.java)
         startActivity(intent)
     }
+    //Agregue para mantener la sesion------------------------------------------------------------
+    fun guardarEstadoButton() {
+        val preferences = getSharedPreferences("Sesion", Context.MODE_PRIVATE)
+        val estado = true
+        val editor = preferences.edit()
+        editor.putBoolean("estado_usu", estado)
+        editor.commit()
+    }
+    //--------------------------------------------------------------------------------------
+
 }
