@@ -1,6 +1,5 @@
 package com.example.blog_app
 
-
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -25,6 +24,7 @@ class Register : AppCompatActivity() {
     private var conPasswordShowin: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
         txtNombre = findViewById(R.id.nameET)
@@ -47,22 +47,26 @@ class Register : AppCompatActivity() {
         }
 
         if (!nombre.matches(Regex("[a-zA-Z]+"))) {
+
             Snackbar.make(view, "El nombre solo puede contener letras", Snackbar.LENGTH_LONG).show()
             return
         }
 
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+
             Snackbar.make(view, "Correo electrónico no válido", Snackbar.LENGTH_LONG).show()
             return
         }
 
         if (telefono.length != 10) {
+
             Snackbar.make(view, "El teléfono debe tener 10 dígitos", Snackbar.LENGTH_LONG).show()
             return
         }
 
         if (password.length < 8 || !password.matches(Regex(".*\\d.*")) || !password.matches(Regex(".*[A-Z].*"))) {
             Snackbar.make(
+
                 view,
                 "La contraseña debe tener al menos 8 caracteres, una mayúscula y un número",
                 Snackbar.LENGTH_LONG
@@ -120,4 +124,5 @@ class Register : AppCompatActivity() {
                 .start() // Inicia la animación
         }
     }
+
 }
