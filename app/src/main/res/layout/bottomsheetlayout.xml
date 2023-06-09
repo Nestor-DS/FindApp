@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAlignment="viewStart"
-            android:text="Cerrar Sesión"
+            android:text="Create"
             android:padding="8dp"
             android:textColor="@color/lavender"
             android:layout_marginStart="12dp"
@@ -43,6 +43,32 @@
 
 
     <LinearLayout
+        android:id="@+id/layoutShorts"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/homeAnimation2"
+            android:layout_width="51dp"
+            android:layout_height="38dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/device" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agregar dispositivo"
+            android:textColor="@color/lavender"
+            android:layout_marginLeft="30dp"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/layoutLive"
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -58,14 +84,15 @@
             android:layout_height="38dp"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
-            app:lottie_rawRes="@raw/reset" />
+            app:lottie_rawRes="@raw/exit" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="Salir"
             android:textColor="@color/lavender"
             android:layout_marginLeft="30dp"
-            android:textSize="16sp"/>
+            android:textSize="24sp"/>
 
     </LinearLayout>
 
