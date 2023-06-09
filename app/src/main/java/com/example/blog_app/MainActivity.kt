@@ -1,8 +1,10 @@
 package com.example.blog_app
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -33,6 +35,23 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 .replace(R.id.fragment_container, HomeFragment()).commit()
             navigationView.setCheckedItem(R.id.nav_home)
         }
+
+        //aca----------------------------------------------------------------------------
+        val preferencias = getSharedPreferences("sesion", Context.MODE_PRIVATE)
+        if (!preferencias.getBoolean("estado_usu", false)) {
+            Handler().postDelayed({
+                val loginIntent = Intent(applicationContext, Login::class.java)
+                startActivity(loginIntent)
+                finish()
+            }, 4000)
+        } else {
+            Handler().postDelayed({
+                val homeIntent = Intent(applicationContext, MainActivity::class.java)
+                startActivity(homeIntent)
+                finish()
+            }, 4000)
+        }
+        //----------------------------------------------------------------------------------
     }
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
