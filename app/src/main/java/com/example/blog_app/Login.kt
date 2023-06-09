@@ -81,4 +81,10 @@ class Login: AppCompatActivity() {
         val intent = Intent (this, Register::class.java)
         startActivity(intent)
     }
+
+    fun clickBtnOlvide (view: View) {
+        val intent = Intent (this, RecoverPassword::class.java)
+        startActivity(intent)
+    }
+
 }
