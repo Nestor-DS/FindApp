@@ -52,7 +52,6 @@
         android:paddingTop="10dp"
         android:paddingBottom="30dp">
 
-
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/homeAnimation3"
             android:layout_width="51dp"
