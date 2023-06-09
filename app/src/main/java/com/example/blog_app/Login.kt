@@ -23,7 +23,7 @@ class Login: AppCompatActivity() {
 
     private lateinit var strEmail: String
     private lateinit var strPassword: String
-    private val url = "http://192.168.74.1/findapp/login.php"
+    private val url = "http://192.168.1.64/findapp/login.php"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
