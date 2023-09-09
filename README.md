@@ -129,10 +129,13 @@ Existen problemas conocidos:
 ### Error de Interfaz de Usuario
 - La interfaz de usuario puede no ser coherente en todos los dispositivos y resoluciones de pantalla. Estoy trabajando en mejorar la adaptabilidad y la usabilidad de la interfaz para ofrecer una experiencia uniforme en diversos entornos.
 
-## Licencia 📜
+<!--## Licencia 📜
 
-Este proyecto está licenciado bajo la [nombre de la licencia]. Consulta el archivo [LICENSE](LICENSE) para obtener más detalles.
+Este proyecto está licenciado bajo la [nombre de la licencia]. Consulta el archivo [LICENSE](LICENSE) para obtener más detalles.-->
 
 ## Contacto 📫
 
-Si sugerencias, no dudes en ponerte en contacto con [tu nombre] a través de [tu dirección de correo electrónico].
+Sugerencias!!, no dudes en ponerte en contacto conmigo a través de 
+
+[![Email Badge](https://img.shields.io/badge/Email-nestorduhamel18%40outlook.es-%23D14836?style=flat-square&logo=microsoft-outlook&logoColor=white)](mailto:nestorduhamel18@outlook.es)
+[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-Nestor%20Sanchez-%230077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nestor-sanchez-51147a1ba/).
