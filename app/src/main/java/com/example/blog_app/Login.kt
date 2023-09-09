@@ -31,7 +31,7 @@ class Login : AppCompatActivity() {
     private lateinit var progressDialog: ProgressDialog
 
     // URL for the login API
-    private var ipUrl: String? = "192.168.8.18"
+    private var ipUrl: String? = ""
 
     private val loginUrl = "http://$ipUrl/findapp/login.php"
 

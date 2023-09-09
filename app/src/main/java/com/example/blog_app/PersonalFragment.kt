@@ -33,7 +33,7 @@ class PersonalFragment : Fragment() {
 
     private  var userId: String? = null
 
-    private var ipUrl: String? = "192.168.8.18"
+    private var ipUrl: String? = ""
 
 
     private lateinit var progressDialog: ProgressDialog

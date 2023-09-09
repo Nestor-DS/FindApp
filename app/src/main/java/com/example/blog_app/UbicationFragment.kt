@@ -31,8 +31,8 @@ class UbicationFragment : Fragment(), OnMapReadyCallback {
 
     private lateinit var map: GoogleMap
     private lateinit var geofenceCircle: Circle
-    var latitude: Double = 19.9965467
-    var longitude: Double = -98.6860308
+    var latitude: Double = 40.420118
+    var longitude: Double = -3.706466
 
     private var radius: Double = 400.0
 

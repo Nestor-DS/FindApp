@@ -26,7 +26,7 @@ class HomeFragment : Fragment() {
     private lateinit var progressDialog: ProgressDialog
     private var userId: String? = null
 
-    private var ipUrl: String? = "192.168.8.18"
+    private var ipUrl: String? = ""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

@@ -25,7 +25,7 @@ class Register : AppCompatActivity() {
     private lateinit var txtConfirmPass: EditText
 
     // Define the IP address
-    private var ipUrl: String? = "192.168.8.18"
+    private var ipUrl: String? = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

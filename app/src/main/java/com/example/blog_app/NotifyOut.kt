@@ -16,7 +16,7 @@ class NotifyOut : Fragment() {
 
     private var userId: String? = null
 
-    private var ipUrl: String? = "192.168.8.18"
+    private var ipUrl: String? = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
