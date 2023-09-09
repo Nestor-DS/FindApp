@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutFragment">
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="137dp"
+        android:text="Acerca de"
+        android:textColor="@color/lavender"
+        android:textSize="30sp" />
+
+    <!-- Auto layout, variables, and unit scale are not yet supported -->
+    <!-- Auto layout, variables, and unit scale are not yet supported -->
+
+    <View
+        android:id="@+id/image_1"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="177dp"
+        android:layout_marginTop="105dp"
+        android:layout_marginEnd="170dp"
+        android:background="@drawable/baseline_edit_location_24" />
+
+    <TextView
+        android:layout_width="349dp"
+        android:layout_height="46dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="39dp"
+        android:layout_marginTop="204dp"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        android:text="Version de la aplicación: 1.0.0.0"
+        android:textSize="24dp" />
+
+
+</RelativeLayout>

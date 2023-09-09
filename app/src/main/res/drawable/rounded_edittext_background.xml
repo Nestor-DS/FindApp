@@ -1,0 +1,5 @@
+<!-- rounded_edittext_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@android:color/white" /> <!-- Cambia el color de fondo si es necesario -->
+    <corners android:radius="60dp" /> <!-- Ajusta el radio según tus preferencias -->
+</shape>
