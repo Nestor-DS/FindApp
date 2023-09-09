@@ -1,6 +1,5 @@
 <h1 align="center">FindApp 🗺️</h1>
 
-![Logo de la Aplicación](URL_DEL_LOGO.png)
 
 ## Descripción
 
