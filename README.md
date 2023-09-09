@@ -43,9 +43,9 @@ La Aplicación FindApp es una plataforma móvil desarrollada en Kotlin para disp
 
 ## Video de Demostración 📽️
 
-[![Alt text](https://img.youtube.com/vi/W5morje1Fjs/0.jpg)](https://www.youtube.com/watch?v=W5morje1Fjs)
+[![Alt text](https://img.youtube.com/vi/aa/0.jpg)](https://www.youtube.com/watch?v=aa)
 
-Puedes ver una demostración completa de la aplicación en [este enlace](https://www.youtube.com/watch?v=1oDGYXddozE). ¡No dudes en echarle un vistazo!
+Puedes ver una demostración completa de la aplicación en [este enlace](https://www.youtube.com/watch?v=aa). ¡No dudes en echarle un vistazo!
 
 
 
